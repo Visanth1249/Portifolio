@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>My Internships</h2>
+
+<div class="internships-container">
+    <div class="intern-card">
+        <h3>📊 ALTAR Data Science Internship</h3>
+        <p><strong>Duration:</strong> Jul 2024 – Sep 2024<br>
+        Worked on machine learning projects and data analytics under EduSkills.</p>
+        <a href="{{ url_for('static', filename='internships/data_science.pdf') }}" target="_blank" class="intern-btn">View Certificate</a>
+    </div>
+
+    <div class="intern-card">
+        <h3>☁️ Juniper Networking Cloud Internship</h3>
+        <p><strong>Duration:</strong> Oct 2024 – Dec 2024<br>
+        Hands-on experience in cloud networking, virtualization, and network security.</p>
+        <a href="{{ url_for('static', filename='internships/network_cloud.pdf') }}" target="_blank" class="intern-btn">View Certificate</a>
+    </div>
+    <div class="intern-card">
+    <h3>🧠 Google AI/ML Internship</h3>
+    <p><strong>Duration:</strong> Jan 2024 – March 2024<br>
+    Worked on machine learning fundamentals, real-time prediction pipelines, and Google AI APIs through guided projects.</p>
+    <a href="{{ url_for('static', filename='internships/google_aiml.pdf') }}" target="_blank" class="intern-btn">View Certificate</a>
+</div>
+
+</div>
+{% endblock %}

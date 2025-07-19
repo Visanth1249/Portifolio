@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>My Projects</h2>
+
+<div class="projects-container">
+    <div class="project-card" onclick="showModal('pet')">
+        <h3>🐾 Online Pet Adoption System</h3>
+        <p>Django-based web app for managing pet adoption and accessories.</p>
+    </div>
+
+    <div class="project-card" onclick="showModal('crop')">
+        <h3>🌾 Crop Disease Prediction</h3>
+        <p>ML model for predicting crop diseases with 90% accuracy.</p>
+    </div>
+
+    <div class="project-card" onclick="showModal('movie')">
+        <h3>🎬 Movie Reviewing System</h3>
+        <p>Java platform for rating and reviewing movies.</p>
+    </div>
+    <div class="project-card" onclick="showModal('disaster')">
+    <h3>🆘 Disaster Management Tool</h3>
+    <p>Performs depth estimation and semantic segmentation using deep learning.</p>
+</div>
+
+</div>
+
+<!-- Modal -->
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+function showModal(project) {
+    const modal = document.getElementById("projectModal");
+    const body = document.getElementById("modal-body");
+
+    if (project === 'pet') {
+        body.innerHTML = `
+            <h2>🐾 Online Pet Adoption System</h2>
+            <p>Built using Django and PostgreSQL, this platform allows users to adopt pets, view accessories, and manage their orders securely.</p>
+            <a href="https://github.com/Visanth1249/Paws-and-pixels-" target="_blank">GitHub Repo</a>
+        `;
+    } else if (project === 'crop') {
+        body.innerHTML = `
+            <h2>🌾 Crop Disease Prediction</h2>
+            <p>Python-based machine learning project using Scikit-learn and image processing to detect and classify crop diseases.</p>
+            <a href="https://github.com/Visanth1249/Crop-Diesaese-Prediction-and-Smart-Forming-Solutions" target="_blank">GitHub Repo</a>
+        `;
+    } else if (project === 'movie') {
+        body.innerHTML = `
+            <h2>🎬 Movie Reviewing System</h2>
+            <p>Java application following OOP principles to collect and display user movie reviews with ratings and sorting functionality.</p>
+            <a href="https://github.com/Visanth1249/Movie-Reviewing-System" target="_blank">GitHub Repo</a>
+        `;
+    }
+    else if (project === 'disaster') {
+    body.innerHTML = `
+        <h2>🆘 Disaster Management Tool</h2>
+        <p><strong>Description:</strong> A computer vision system to analyze disaster zones using <b>depth estimation</b> and <b>semantic segmentation</b> on RGB images.</p>
+
+        <p><strong>Technologies:</strong> Python, Intel DPT-Large, NVIDIA SegFormer, OpenCV, Colormaps</p>
+
+        <p><strong>Outputs:</strong></p>
+        <ul>
+            <li>📏 <b>Depth Map:</b> Color-based depth visualization using plasma colormap</li>
+            <li>🧠 <b>Segmentation Map:</b> Labels objects like Road, Building, Car, etc.</li>
+            <li>📋 <b>Object Table:</b> Centroid coordinates and depth at each object’s center</li>
+        </ul>
+
+        <p><strong>Applications:</strong></p>
+        <ul>
+            <li>🚨 Post-disaster damage analysis</li>
+            <li>📍 Emergency response prioritization</li>
+            <li>🏙 Urban infrastructure monitoring</li>
+        </ul>
+
+        <p><strong>GitHub Repo:</strong>
+            <a href="https://github.com/Visanth1249/Disaster-Management-Tool" target="_blank">
+                github.com/Visanth1249/Disaster-Management-Tool
+            </a>
+        </p>
+
+        <p><strong>Team:</strong> K. Visanth Keerthan Sai (2200080236), B. Ajith Kumar (2200080242), N. Sai Krishna (2200080251)</p>
+    `;
+}
+
+
+    modal.style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("projectModal").style.display = "none";
+}
+</script>
+{% endblock %}

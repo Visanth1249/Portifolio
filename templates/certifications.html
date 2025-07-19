@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>My Certifications</h2>
+
+<!-- Individual Certifications -->
+<div class="certifications-container">
+
+    <div class="cert-card">
+        <h3>🐍 IBM Python Certification</h3>
+        <p>Completed foundational and intermediate Python development skills.</p>
+        <a href="{{ url_for('static', filename='certifications/ibm-python.pdf') }}" target="_blank" class="cert-btn">View Certificate</a>
+    </div>
+
+    <div class="cert-card">
+        <h3>🗄 MongoDB Certified DBA</h3>
+        <p>Certified MongoDB Database Administrator with hands-on query skills.</p>
+        <a href="{{ url_for('static', filename='certifications/mongodb_dba.pdf') }}" target="_blank" class="cert-btn">View Certificate</a>
+    </div>
+
+    <div class="cert-card">
+        <h3>🤖 Salesforce AI Associate</h3>
+        <p>Successfully completed Salesforce AI track and passed AI Associate exam.</p>
+        <a href="{{ url_for('static', filename='certifications/salesforce-ai.pdf') }}" target="_blank" class="cert-btn">View Certificate</a>
+    </div>
+
+    <div class="cert-card">
+        <h3>🤖 RPA Certification</h3>
+        <p>Learned Robotic Process Automation fundamentals and tools for automating tasks efficiently.</p>
+        <a href="{{ url_for('static', filename='certifications/rpa-certification.pdf') }}" target="_blank" class="cert-btn">View Certificate</a>
+    </div>
+
+    <div class="cert-card">
+        <h3>🌐 Aviatrix Certified Engineer – Multicloud Network Associate</h3>
+        <p>Completed training on multicloud networking, secure cloud architecture, and gateway-based design using Aviatrix.</p>
+        <a href="{{ url_for('static', filename='certifications/aviatrix-multicloud.pdf') }}" target="_blank" class="cert-btn">View Certificate</a>
+    </div>
+
+</div>
+
+<!-- Specializations Section -->
+<h2 style="margin-top: 50px;"> Coursera Specializations</h2>
+
+<div class="specializations-container">
+
+    <div class="specialization-card">
+        <h3>🤖 IBM Machine Learning Specialization</h3>
+        <p><strong>Completed by:</strong> KONAKALA VISANTH KEERTHAN SAI<br>
+        <strong>Completed on:</strong> December 13, 2023<br>
+        <strong>Duration:</strong> ~3 months (10 hrs/week)</p>
+
+        <p><strong>Courses Completed:</strong></p>
+        <ul>
+            <li>Exploratory Data Analysis for Machine Learning</li>
+            <li>Supervised Machine Learning: Regression</li>
+            <li>Supervised Machine Learning: Classification</li>
+            <li>Unsupervised Machine Learning</li>
+            <li>Deep Learning and Reinforcement Learning</li>
+            <li>Machine Learning Capstone</li>
+        </ul>
+
+        <a href="{{ url_for('static', filename='certifications/Ibm-ml.pdf') }}" target="_blank" class="cert-btn">View Certificate</a>
+    </div>
+
+    <div class="specialization-card">
+        <h3>📈 SAS Statistical Business Analyst Specialization</h3>
+        <p><strong>Completed by:</strong> KONAKALA VISANTH KEERTHAN SAI<br>
+        <strong>Completed on:</strong> February 21, 2024<br>
+        <strong>Duration:</strong> ~1 month (10 hrs/week)</p>
+
+        <p><strong>Courses Completed:</strong></p>
+        <ul>
+            <li>Introduction to Statistical Analysis: Hypothesis Testing</li>
+            <li>Regression Modeling Fundamentals</li>
+            <li>Predictive Modeling with Logistic Regression using SAS</li>
+        </ul>
+
+        <a href="{{ url_for('static', filename='certifications/SAS.pdf') }}" target="_blank" class="cert-btn">View Certificate</a>
+    </div>
+
+</div>
+
+{% endblock %}

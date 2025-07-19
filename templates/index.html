@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<!--<h2>About Me</h2>-->
+
+<div class="about-container">
+    <div class="about-image">
+        <img src="{{ url_for('static', filename='images/profilepic.jpg') }}" alt="Visanth Profile Picture">
+    </div>
+    <div class="about-text">
+        <p>Hi, I’m <strong>Visanth</strong> — an aspiring AI and Data Science engineer passionate about building smart solutions with Python, ML, and Django.</p>
+        <p>Currently pursuing B.Tech at KL University with a CGPA of <strong>9.29/10</strong>.</p>
+        <p>I enjoy creating intelligent systems and working on real-world applications involving machine learning, automation, and analytics.</p>
+    </div>
+</div>
+{% endblock %}
