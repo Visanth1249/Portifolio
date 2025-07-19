@@ -34,5 +34,9 @@ def achievements():
 def resume():
     return send_from_directory("resume", "Visanth_final_updated_resume 1.pdf", as_attachment=False)
 
+import os
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
