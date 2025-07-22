@@ -30,6 +30,10 @@ def internships():
 def achievements():
     return render_template("achievements.html")
 
+@app.route("/education")
+def education():
+    return render_template("education.html")
+
 @app.route("/resume")
 def resume():
     return send_from_directory("resume", "Visanth_final_updated_resume 1.pdf", as_attachment=False)
